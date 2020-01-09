@@ -4,7 +4,7 @@ export async function getNotes(req, res) {
   const dbInstance = database()
   try {
     const client = await dbInstance.connect()
-    const db = client.db('single-spa-app')
+    const db = client.db('single-spa-notes')
     const collection = db.collection('notes')
 
     const queryLimit = req.query && req.query.limit
@@ -38,8 +38,8 @@ export async function postNotes(req, res) {
   const dbInstance = database()
   try {
     const client = await dbInstance.connect()
-    const db = client.db('mern-shopping')
-    const collection = db.collection('items')
+    const db = client.db('single-spa-notes')
+    const collection = db.collection('notes')
 
     const result = await collection.insertMany(items)
     dbInstance.disconnect(client)
