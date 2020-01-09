@@ -1,9 +1,37 @@
 {
-  "name": "single-spa-notes-api",
+  "name": "restful-api",
   "version": "1.0.0",
   "main": "index.js",
+  "repository": "https://github.com/adhitamafikri/restful-mongo.git",
+  "author": "adhitamafikri <adhitamafikri@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "start": "nodemon --exec babel-node src/app.js"
+  },
+  "_moduleAliases": {
+    "@config": "src/config",
+    "@routes": "src/routes",
+    "@database": "src/database",
+    "@models": "src/models",
+    "@controllers": "src/controllers",
+    "@services": "src/services",
+    "@repositories": "src/repositories"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.0",
+    "@babel/node": "^7.6.1",
+    "@babel/preset-env": "^7.6.0",
+    "eslint": "^6.4.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "nodemon": "^1.19.2"
+  },
   "dependencies": {
-    "mongodb": "^3.4.1"
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.1.0",
+    "express": "^4.17.1",
+    "module-alias": "^2.2.1",
+    "mongodb": "^3.4.1",
+    "mongoose": "^5.7.1"
   }
 }
