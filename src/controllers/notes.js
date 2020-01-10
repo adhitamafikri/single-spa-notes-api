@@ -27,9 +27,9 @@ export async function getNotes(req, res) {
 }
 
 export async function postNotes(req, res) {
-  const { items } = req.body
+  const note = req.body
 
-  if (!items) {
+  if (!note) {
     return res.status(400).json({
       message: 'You do not have any items to store',
     })
@@ -41,7 +41,7 @@ export async function postNotes(req, res) {
     const db = client.db('single-spa-notes')
     const collection = db.collection('notes')
 
-    const result = await collection.insertMany(items)
+    const result = await collection.insert(note)
     dbInstance.disconnect(client)
 
     return res.status(200).json({

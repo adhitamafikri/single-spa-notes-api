@@ -1,4 +1,5 @@
 import express from 'express'
+import cors from 'cors'
 import bodyParser from 'body-parser'
 import 'module-alias/register'
 import 'dotenv/config'
@@ -10,6 +11,7 @@ import loadRoutes from '@routes'
 const app = express()
 
 // Middlewares
+app.use(cors())
 app.use(bodyParser.json())
 
 // Routes
