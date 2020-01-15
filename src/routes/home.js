@@ -5,8 +5,6 @@ import * as HomeController from '@controllers/home'
  * @return {express.Router}
  */
 function HomeRoutes(router) {
-  console.log('In the HomeRoutes!')
-
   router.get('/', HomeController.getHome)
 
   return router

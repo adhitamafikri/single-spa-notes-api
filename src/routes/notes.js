@@ -5,8 +5,6 @@ import * as NotesController from '@controllers/notes'
  * @return {express.Router}
  */
 function NotesRoutes(router) {
-  console.log('In the NotesRoutes')
-
   router.get('/notes', NotesController.getNotes)
   router.post('/notes', NotesController.postNotes)
 
