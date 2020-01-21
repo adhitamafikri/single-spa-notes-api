@@ -6,7 +6,8 @@
   "author": "adhitamafikri <adhitamafikri@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "nodemon --exec babel-node src/app.js"
+    "start": "node src/app.js",
+    "dev": "nodemon --exec babel-node src/app.js"
   },
   "_moduleAliases": {
     "@config": "src/config",
