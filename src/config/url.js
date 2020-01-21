@@ -1,1 +1,1 @@
-export const BASE_URL = '/single-spa-notes/v1'
+export const { API_BASE_URL } = process.env
