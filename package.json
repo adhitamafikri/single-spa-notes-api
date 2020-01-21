@@ -6,8 +6,11 @@
   "author": "adhitamafikri <adhitamafikri@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "node src/app.js",
-    "dev": "nodemon --exec babel-node src/app.js"
+    "clean": "rm -rf build && mkdir build",
+    "build-babel": "babel -d ./build ./src -s",
+    "dev": "nodemon --exec babel-node src/app.js",
+    "build": "yarn clean && yarn build-babel",
+    "start": "yarn build && node build/app.js"
   },
   "_moduleAliases": {
     "@config": "src/config",
