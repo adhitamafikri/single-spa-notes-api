@@ -18,5 +18,5 @@ app.use(bodyParser.json())
 app.use(`${BASE_URL}`, loadRoutes())
 
 app.listen(APP_PORT, () => {
-  console.log(`running on ${APP_PORT}`)
+  console.log(`app running on ${APP_PORT}`)
 })
