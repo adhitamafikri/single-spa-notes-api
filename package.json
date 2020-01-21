@@ -10,7 +10,8 @@
     "build-babel": "node_modules/@babel/cli/bin/babel.js -d ./build ./src -s",
     "dev": "nodemon --exec babel-node src/app.js",
     "build": "yarn clean && yarn build-babel",
-    "start": "yarn build && node build/app.js"
+    "postinstall": "yarn build",
+    "start": "node build/app.js"
   },
   "devDependencies": {
     "@babel/core": "^7.6.0",
