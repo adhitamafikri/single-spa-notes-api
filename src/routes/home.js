@@ -1,4 +1,4 @@
-import * as HomeController from '@controllers/home'
+import * as HomeController from '../controllers/home'
 
 /**
  * @param {express.Router} router

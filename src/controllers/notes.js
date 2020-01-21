@@ -1,4 +1,4 @@
-import database from '@database/mongodb'
+import database from '../database/mongodb'
 
 export async function getNotes(req, res) {
   const dbInstance = database()

@@ -12,15 +12,6 @@
     "build": "yarn clean && yarn build-babel",
     "start": "yarn build && node build/app.js"
   },
-  "_moduleAliases": {
-    "@config": "src/config",
-    "@routes": "src/routes",
-    "@database": "src/database",
-    "@models": "src/models",
-    "@controllers": "src/controllers",
-    "@services": "src/services",
-    "@repositories": "src/repositories"
-  },
   "devDependencies": {
     "@babel/core": "^7.6.0",
     "@babel/node": "^7.6.1",
@@ -36,8 +27,8 @@
     "cors": "^2.8.5",
     "dotenv": "^8.1.0",
     "express": "^4.17.1",
-    "module-alias": "^2.2.1",
     "mongodb": "^3.4.1",
-    "mongoose": "^5.7.1"
+    "mongoose": "^5.7.1",
+    "regenerator-runtime": "^0.13.3"
   }
 }

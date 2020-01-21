@@ -1,4 +1,4 @@
-import * as NotesController from '@controllers/notes'
+import * as NotesController from '../controllers/notes'
 
 /**
  * @param {express.Router} router

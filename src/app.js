@@ -1,12 +1,12 @@
 import express from 'express'
 import cors from 'cors'
 import bodyParser from 'body-parser'
-import 'module-alias/register'
+import 'regenerator-runtime'
 import 'dotenv/config'
 
-import { APP_PORT } from '@config/app'
-import { BASE_URL } from '@config/url'
-import loadRoutes from '@routes'
+import loadRoutes from './routes'
+import { BASE_URL } from './config/url'
+import { APP_PORT } from './config/app'
 
 const app = express()
 
