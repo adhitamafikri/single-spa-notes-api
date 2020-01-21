@@ -17,6 +17,7 @@ app.use(bodyParser.json())
 // Routes
 app.use(`${API_BASE_URL}`, loadRoutes())
 
-app.listen(APP_PORT, () => {
-  console.log(`app running on ${APP_PORT}`)
+const PORT = process.env.PORT || APP_PORT
+app.listen(PORT, () => {
+  console.log(`app running on ${PORT}`)
 })
